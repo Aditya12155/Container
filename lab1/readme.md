@@ -57,8 +57,141 @@ Containers virtualize at the operating system level. They share the host OS kern
 ### 7. Destroy Vagrant
 ![Vagrant Destroy](images/ss7.png)
 
-## Part B: Containers using WSL (Windows)
+## **Experiment Setup – Part B: Containers using WSL (Windows)**
 
-### Step 1: Install WSL 2
-```bash
+### **Step 1: Install WSL 2**
+
+```powershell
 wsl --install
+```
+
+Reboot the system after installation.
+
+### **Step 2: Install Ubuntu on WSL**
+
+```powershell
+wsl --install -d Ubuntu
+```
+[INSERT SCREENSHOT: Ubuntu installation on WSL]
+---
+
+### **Step 3: Install Docker Engine inside WSL**
+
+```bash
+sudo apt update
+sudo apt install -y docker.io
+sudo systemctl start docker
+sudo usermod -aG docker $USER
+```
+
+Logout and login again to apply group changes.
+
+Docker Installation in WSL
+[INSERT SCREENSHOT: Docker installation process]
+
+Docker Version Check
+
+
+[INSERT SCREENSHOT: docker --version output]
+
+
+---
+
+### **Step 4: Run Ubuntu Container with Nginx**
+
+```bash
+docker pull ubuntu
+
+docker run -d -p 8080:80 --name nginx-container nginx
+```
+Docker Pull and Run
+
+[INSERT SCREENSHOT: Docker pull nginx and docker run command]
+
+Container Running Status
+
+[INSERT SCREENSHOT: docker ps showing nginx-container running]
+
+---
+
+### **Step 5: Verify Nginx in Container**
+
+```bash
+curl localhost:8080
+```
+Nginx Verification in Container
+
+```
+[INSERT SCREENSHOT: curl output showing Nginx welcome page from container]
+```
+
+---
+
+## **Resource Utilization Observation**
+
+### **VM Observation Commands**
+
+```bash
+free -h
+htop
+systemd-analyze
+```
+VM Resource Usage
+
+[INSERT SCREENSHOT: free -h output in VM]
+
+VM Boot Time Analysis
+
+[INSERT SCREENSHOT: systemd-analyze output]
+
+---
+
+### **Container Observation Commands**
+
+```bash
+docker stats
+free -h
+```
+Container Resource Usage
+
+[INSERT SCREENSHOT: docker stats output]
+
+Host System Resource Usage
+
+[INSERT SCREENSHOT: free -h output on host with container running]
+
+---
+
+### **Parameters to Compare and Observations**
+
+| Parameter    | Virtual Machine | Container |
+| ------------ | --------------- | --------- |
+| Boot Time    | High            | Very Low  |
+| RAM Usage    | High            | Low       |
+| CPU Overhead | Higher          | Minimal   |
+| Disk Usage   | Larger          | Smaller   |
+| Isolation    | Strong          | Moderate  |
+
+---
+
+## **Result**
+
+The experiment demonstrates that containers are significantly more lightweight and resource-efficient compared to virtual machines, while virtual machines provide stronger isolation and full OS-level abstraction.
+
+Virtual Machine:
+
+* Resource overhead: High
+* Isolation: Strong
+
+Container:
+
+* Resource overhead: Minimal
+* Isolation: Good
+
+---
+
+## **Conclusion**
+
+Virtual Machines are suitable for full OS isolation and legacy workloads, whereas Containers are ideal for microservices, rapid deployment, and efficient resource utilization.
+
+---
