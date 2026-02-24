@@ -1,35 +1,31 @@
 
 ---
 
-## 🚀 Labs Overview
+# ✅ `LAB/readme.md` (with navigation to each lab + back button)
 
-### 🔹 Lab 1 – Docker Installation & Basic Commands
-📁 [Open Lab 1](./lab1)
+```md
+<h1 align="center">🧪 Docker LAB</h1>
 
-- Install Docker
-- Verify Docker setup
-- Run first container
-- Basic Docker commands
-
----
-
-### 🔹 Lab 2 – Working with Docker Images & Containers
-📁 [Open Lab 2](./lab2)
-
-- Pull image from Docker Hub
-- Run container with port mapping
-- Container lifecycle management
-- Start / Stop / Remove containers
+<p align="center">
+  <a href="../">⬅ Back to Home</a>
+</p>
 
 ---
 
-### 🔹 Lab 3 – Custom Docker Image (NGINX with Ubuntu)
-📁 [Open Lab 3](./lab3)
+## 🔬 Experiments
 
-- Create Dockerfile
-- Build custom image
-- Run NGINX container
-- Access from browser
+| Lab | Title | Link |
+|-----|-------|------|
+| 1️⃣ | Docker Installation & Setup | [Open](./lab1) |
+| 2️⃣ | Docker Images & Containers | [Open](./lab2) |
+| 3️⃣ | Custom NGINX Image | [Open](./lab3) |
 
+---
 
+## 🚀 Quick Buttons
 
+<p align="center">
+  <a href="./lab1">🔸 Lab 1</a> •
+  <a href="./lab2">🔸 Lab 2</a> •
+  <a href="./lab3">🔸 Lab 3</a>
+</p>
