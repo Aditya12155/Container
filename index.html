@@ -1,2 +1,73 @@
-<h1>🚀 Container Lab</h1>
-<p>GitHub Pages is working ✅</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>📘 Container Lab</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: #0d1117;
+      color: #e6edf3;
+    }
+
+    header {
+      background: #161b22;
+      padding: 15px 30px;
+      font-size: 22px;
+      font-weight: bold;
+      border-bottom: 1px solid #30363d;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    a { color: #58a6ff; }
+
+    pre {
+      background: #161b22;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+
+    code {
+      background: #161b22;
+      padding: 3px 6px;
+      border-radius: 6px;
+    }
+
+    h1, h2, h3 {
+      border-bottom: 1px solid #30363d;
+      padding-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<header>🐳 Container Lab Documentation</header>
+
+<div class="container" id="content">
+  ⏳ Loading README...
+</div>
+
+<script>
+  fetch("README.md")
+    .then(response => response.text())
+    .then(text => {
+      document.getElementById("content").innerHTML =
+        marked.parse(text);
+    })
+    .catch(() => {
+      document.getElementById("content").innerHTML =
+        "❌ README.md not found";
+    });
+</script>
+
+</body>
+</html>
