@@ -1,64 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>📘 Container Documentation</title>
+<meta charset="UTF-8" />
+<title>📘 Container Documentation</title>
 
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
-  <style>
-    body{
-      margin:0;
-      font-family:Segoe UI, sans-serif;
-      background:#0d1117;
-      color:#e6edf3;
-    }
+<style>
+body{
+  margin:0;
+  font-family:Segoe UI, sans-serif;
+  background:#0d1117;
+  color:#e6edf3;
+}
 
-    header{
-      background:#161b22;
-      padding:15px 30px;
-      font-size:22px;
-      font-weight:bold;
-      border-bottom:1px solid #30363d;
-    }
+/* 🔝 NAVBAR */
+header{
+  position:sticky;
+  top:0;
+  background:#161b22;
+  padding:15px 25px;
+  border-bottom:1px solid #30363d;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:1000;
+}
 
-    .container{
-      max-width:1000px;
-      margin:auto;
-      padding:40px 20px;
-    }
+nav button{
+  background:#21262d;
+  color:#e6edf3;
+  border:1px solid #30363d;
+  padding:8px 16px;
+  margin-left:10px;
+  border-radius:6px;
+  cursor:pointer;
+  font-size:14px;
+  transition:0.3s;
+}
 
-    a{color:#58a6ff;}
-    pre{background:#161b22;padding:15px;border-radius:8px;overflow:auto;}
-    code{background:#161b22;padding:3px 6px;border-radius:6px;}
-  </style>
+nav button:hover{
+  background:#30363d;
+}
+
+.active{
+  background:#238636 !important;
+}
+
+/* 📄 CONTENT */
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+/* markdown styling */
+h1,h2,h3{
+  border-bottom:1px solid #30363d;
+  padding-bottom:6px;
+}
+
+pre{
+  background:#161b22;
+  padding:15px;
+  border-radius:8px;
+  overflow:auto;
+}
+
+code{
+  background:#161b22;
+  padding:3px 6px;
+  border-radius:6px;
+}
+
+a{color:#58a6ff;}
+
+.loader{
+  text-align:center;
+  font-size:18px;
+  opacity:0.7;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  🐳 Container Documentation |
-  <a href="LAB/">🧪 LAB</a> |
-  <a href="lectures/">📚 Lectures</a>
+  <div>🐳 Container Documentation</div>
+
+  <nav>
+    <button onclick="loadMD('readme.md', this)" class="active">🏠 Home</button>
+    <button onclick="loadMD('LAB/readme.md', this)">🧪 LAB</button>
+    <button onclick="loadMD('lectures/readme.md', this)">📚 Lectures</button>
+  </nav>
 </header>
 
 <div class="container" id="content">
-  ⏳ Loading README...
+  <div class="loader">⏳ Loading...</div>
 </div>
 
 <script>
-fetch("readme.md")
-  .then(res => {
-    if (!res.ok) throw new Error("File not found → " + res.status);
-    return res.text();
-  })
-  .then(md => {
-    document.getElementById("content").innerHTML = marked.parse(md);
-  })
-  .catch(err => {
-    document.getElementById("content").innerHTML =
-      "❌ ERROR: " + err;
-  });
+function setActive(btn){
+  document.querySelectorAll("nav button").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+}
+
+function loadMD(file, btn){
+  setActive(btn);
+
+  document.getElementById("content").innerHTML =
+    '<div class="loader">⏳ Loading...</div>';
+
+  fetch(file)
+    .then(res=>{
+      if(!res.ok) throw new Error("File not found → "+res.status);
+      return res.text();
+    })
+    .then(md=>{
+      document.getElementById("content").innerHTML =
+        marked.parse(md);
+    })
+    .catch(err=>{
+      document.getElementById("content").innerHTML =
+        `<h2>❌ Error</h2><p>${err}</p>`;
+    });
+}
+
+/* 🚀 Load home README by default */
+loadMD("readme.md", document.querySelector("nav button"));
 </script>
 
 </body>
