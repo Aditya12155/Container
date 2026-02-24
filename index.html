@@ -1,20 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Container Docs</title>
+  <meta charset="UTF-8" />
+  <title>📘 Container Documentation</title>
+
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <style>
+    body{
+      margin:0;
+      font-family:Segoe UI, sans-serif;
+      background:#0d1117;
+      color:#e6edf3;
+    }
+
+    header{
+      background:#161b22;
+      padding:15px 30px;
+      font-size:22px;
+      font-weight:bold;
+      border-bottom:1px solid #30363d;
+    }
+
+    .container{
+      max-width:1000px;
+      margin:auto;
+      padding:40px 20px;
+    }
+
+    a{color:#58a6ff;}
+    pre{background:#161b22;padding:15px;border-radius:8px;overflow:auto;}
+    code{background:#161b22;padding:3px 6px;border-radius:6px;}
+  </style>
 </head>
 
-<body style="background:#0d1117;color:white;font-family:sans-serif">
+<body>
 
-<h1>📘 Container Documentation</h1>
-<div id="content">Loading...</div>
+<header>
+  🐳 Container Documentation |
+  <a href="LAB/">🧪 LAB</a> |
+  <a href="lectures/">📚 Lectures</a>
+</header>
+
+<div class="container" id="content">
+  ⏳ Loading README...
+</div>
 
 <script>
-fetch("README.md")   // ⚠ change path if needed
+fetch("readme.md")
   .then(res => {
-    if (!res.ok) throw new Error("README not found → " + res.status);
+    if (!res.ok) throw new Error("File not found → " + res.status);
     return res.text();
   })
   .then(md => {
