@@ -106,7 +106,8 @@ function setActive(btn){
 }
 
 function loadMD(file, btn){
-  setActive(btn);
+
+  if(btn) setActive(btn);
 
   document.getElementById("content").innerHTML =
     '<div class="loader">⏳ Loading...</div>';
@@ -117,6 +118,14 @@ function loadMD(file, btn){
       return res.text();
     })
     .then(md=>{
+
+      /* ✂ REMOVE everything after Quick Navigation */
+      const stopAt = md.indexOf("## 📂 Quick Navigation");
+
+      if(stopAt !== -1){
+        md = md.substring(0, stopAt);
+      }
+
       document.getElementById("content").innerHTML =
         marked.parse(md);
     })
@@ -127,7 +136,7 @@ function loadMD(file, btn){
 }
 
 /* 🚀 Load home README by default */
-loadMD("readme.md", document.querySelector("nav button"));
+loadMD("readme.md");
 </script>
 
 </body>
