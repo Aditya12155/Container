@@ -28,28 +28,5 @@
   <a href="./LAB/lab3"><img src="https://img.shields.io/badge/Lab%203-Custom%20NGINX-success?style=for-the-badge"></a>
 </p>
 
-### 🔬 Direct Access
 
-- 🔹 **Lab 1:** [Docker Installation & Setup](./LAB/lab1)  
-- 🔹 **Lab 2:** [Docker Image & Container Lifecycle](./LAB/lab2)  
-- 🔹 **Lab 3:** [Custom NGINX Docker Image](./LAB/lab3)
-
----
-
-# 📚 Lectures
-
-<p align="center">
-  <a href="./lectures"><img src="https://img.shields.io/badge/View-All-Lectures-9c27b0?style=for-the-badge"></a>
-</p>
-
-### 📖 Topics Covered
-
-- Containerization Fundamentals  
-- Docker Architecture  
-- Docker Commands  
-- Dockerfile  
-- Volumes & Networking  
-- Docker Compose  
-
----
 
