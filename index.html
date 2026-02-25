@@ -14,18 +14,7 @@ body{
   color:#e6edf3;
 }
 
-/* 🔝 NAVBAR */
-header{
-  position:sticky;
-  top:0;
-  background:#161b22;
-  padding:15px 25px;
-  border-bottom:1px solid #30363d;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  z-index:1000;
-}
+
 
 nav button{
   background:#21262d;
@@ -91,19 +80,6 @@ a{color:#58a6ff;}
 
 <body>
 
-<header>
-  <div>🐳 Container Documentation</div>
-
-  <nav>
-    <button onclick="loadMD('readme.md', this)" class="active">🏠 Home</button>
-
-    <button onclick="loadMD('LAB/lab1/readme.md', this)">🧪 Lab 1</button>
-    <button onclick="loadMD('LAB/lab2/README.md', this)">🧪 Lab 2</button>
-    <button onclick="loadMD('LAB/lab3/readme.md', this)">🧪 Lab 3</button>
-
-    <button onclick="loadMD('lectures/README.md', this)">📚 Lectures</button>
-  </nav>
-</header>
 
 <div class="container" id="content">
   <div class="loader">⏳ Loading...</div>
