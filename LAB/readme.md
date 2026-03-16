@@ -1,5 +1,6 @@
 
----
+# Name: Aditya Sharma
+# Course: Containerization and DevOps Lab 
 
 ## 🚀 Labs Overview
 
@@ -25,11 +26,19 @@
 
 ### 🔹 Lab 3 – Custom Docker Image (NGINX with Ubuntu)
 📁 [Open Lab 3](./lab3)
-
+ 
 - Create Dockerfile
 - Build custom image
 - Run NGINX container
 - Access from browser
 
+---
 
+### 🔹 Lab 4 - Docker Essentials: Dockerfile, .dockerignore, Tagging & Publishing
+📁 [Open Lab 4](./lab4)
 
+- Creqte Dockerfile
+- Create .dockerignore
+- Build Docker Image & tag it
+- Push image to dockerhub
+- Pull image from dockerhub
