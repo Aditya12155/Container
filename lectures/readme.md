@@ -33,6 +33,12 @@
 - Additional resources  
 
 ---
+### 📘 [Lecture 4](./lecture4/)
+- Advanced topics  
+- Case studies  
+- Additional resources  
+
+---
 
 ## ⚙️ How to Use
 
