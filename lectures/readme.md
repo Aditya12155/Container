@@ -40,23 +40,6 @@
 
 ---
 
-## ⚙️ How to Use
-
-1. Click on any lecture from **Quick Navigation**  
-2. Open `notes.md` for theory  
-3. Explore `examples/` for code  
-4. Use `resources/` for extra material  
-
----
-
-## 🚀 Purpose
-
-- Organized lecture-wise learning  
-- Easy navigation  
-- Clean repository structure  
-
----
-
 ## 👨‍💻 Author
 
 Aditya Sharma
