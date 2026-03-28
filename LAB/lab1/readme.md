@@ -72,8 +72,7 @@ Reboot the system after installation.
 ```powershell
 wsl --install -d Ubuntu
 ```
-[INSERT SCREENSHOT: Ubuntu installation on WSL]
----
+'''
 
 ### **Step 3: Install Docker Engine inside WSL**
 
@@ -86,13 +85,11 @@ sudo usermod -aG docker $USER
 
 Logout and login again to apply group changes.
 
-Docker Installation in WSL
-[INSERT SCREENSHOT: Docker installation process]
+```
 
 Docker Version Check
 
-
-[INSERT SCREENSHOT: docker --version output]
+```
 
 
 ---
@@ -105,12 +102,11 @@ docker pull ubuntu
 docker run -d -p 8080:80 --name nginx-container nginx
 ```
 Docker Pull and Run
-
-[INSERT SCREENSHOT: Docker pull nginx and docker run command]
+```
+```
 
 Container Running Status
-
-[INSERT SCREENSHOT: docker ps showing nginx-container running]
+```
 
 ---
 
@@ -121,9 +117,7 @@ curl localhost:8080
 ```
 Nginx Verification in Container
 
-```
-[INSERT SCREENSHOT: curl output showing Nginx welcome page from container]
-```
+`
 
 ---
 
@@ -138,11 +132,11 @@ systemd-analyze
 ```
 VM Resource Usage
 
-[INSERT SCREENSHOT: free -h output in VM]
+
 
 VM Boot Time Analysis
 
-[INSERT SCREENSHOT: systemd-analyze output]
+
 
 ---
 
@@ -154,11 +148,11 @@ free -h
 ```
 Container Resource Usage
 
-[INSERT SCREENSHOT: docker stats output]
+
 
 Host System Resource Usage
 
-[INSERT SCREENSHOT: free -h output on host with container running]
+
 
 ---
 
