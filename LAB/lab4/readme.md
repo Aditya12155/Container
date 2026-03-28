@@ -120,7 +120,7 @@ docker tag myapp:1.0 username/myapp:1.0
 Example:
 
 ```bash
-docker tag myapp:1.0 rajvardhan/myapp:1.0
+docker tag myapp:1.0 aditya/myapp:1.0
 ```
 
 ---
@@ -151,7 +151,7 @@ docker push username/myapp:1.0
 Example:
 
 ```bash
-docker push rajvardhan/myapp:1.0
+docker push aditya/myapp:1.0
 ```
 
 ---
