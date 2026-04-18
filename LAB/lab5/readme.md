@@ -6,15 +6,6 @@ This experiment covers:
 - Environment Variables
 - Monitoring & Networks
 
----
-
-## 📁 Project Structure
-
-lab5/
-│── 2nd/
-│── images/
-│   ├── 1.png → 17.png
-│── README.md
 
 ---
 
