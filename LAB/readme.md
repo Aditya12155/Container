@@ -42,3 +42,13 @@
 - Build Docker Image & tag it
 - Push image to dockerhub
 - Pull image from dockerhub
+
+
+### 🔹 Lab 4 -  Docker Volumes, Environment Variables & Networks
+📁 [Open Lab 5](./lab5)
+
+
+This experiment covers:
+- Docker Volumes (Persistent Storage)
+- Environment Variables
+- Monitoring & Networks
