@@ -52,3 +52,10 @@ This experiment covers:
 - Docker Volumes (Persistent Storage)
 - Environment Variables
 - Monitoring & Networks
+
+
+# 🐳 Lab 6: Docker Run vs Docker Compose
+📁 [Open Lab 6](./lab6)
+
+Comparison of Docker Run and Docker Compose
+To understand the relationship between `docker run` and Docker Compose and compare their syntax and use cases.
