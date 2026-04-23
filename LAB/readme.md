@@ -59,3 +59,12 @@ This experiment covers:
 
 Comparison of Docker Run and Docker Compose
 To understand the relationship between `docker run` and Docker Compose and compare their syntax and use cases.
+
+
+# 🚀 Lab 7: CI/CD using Jenkins, GitHub & Docker Hub
+📁 [Open Lab 7](./lab7)
+
+To design and implement a complete CI/CD pipeline using Jenkins, integrating:
+- GitHub (source code)
+- Docker (build)
+- Docker Hub (deployment)
