@@ -1,6 +1,6 @@
 # Lab 12: Study and Analyse Container Orchestration using Kubernetes
 
-## Objective
+### Objective
 
 Learn why Kubernetes is used, its basic concepts, and how to deploy, scale, and fix applications using Kubernetes commands.
 
