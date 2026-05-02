@@ -4,7 +4,7 @@
 
 Learn why Kubernetes is used, its basic concepts, and how to deploy, scale, and fix applications using Kubernetes commands.
 
-## Why Kubernetes over Docker Swarm?
+### Why Kubernetes over Docker Swarm?
 
 | Reason | Explanation |
 |--------|-------------|
